@@ -360,7 +360,7 @@
                 
                   <h1>Plotting</h1>
                 
-                <div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">notebook</span>
+                <div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
 
@@ -371,46 +371,68 @@
 <span class="sd">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`</span>
 <span class="sd">&#39;&#39;&#39;</span>
 <span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">r</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mi">1j</span><span class="o">*</span><span class="n">theta</span><span class="p">)</span> <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span> <span class="mi">200</span><span class="p">)]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="n">array</span><span class="p">(</span><span class="n">Y</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">real</span><span class="p">(</span><span class="n">Y</span><span class="p">),</span> <span class="n">imag</span><span class="p">(</span><span class="n">Y</span><span class="p">),</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="c1"># Y = [r*exp(1j*theta) for theta in linspace(0,2*pi, 200)]</span>
+<span class="c1"># Y = array(Y)</span>
+<span class="c1"># plt.plot(real(Y), imag(Y), &#39;r&#39;)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Imaginary&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Real&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
 
 
-<span class="k">def</span> <span class="nf">argand</span><span class="p">(</span><span class="n">complex_number</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">argand</span><span class="p">(</span><span class="n">complex_number</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
     <span class="sd">&#39;&#39;&#39;</span>
 <span class="sd">    This function takes a complex number.</span>
 <span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">complex_number</span>
-    <span class="n">x1</span><span class="p">,</span><span class="n">y1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="n">real</span><span class="p">(</span><span class="n">y</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span>
-    <span class="n">x2</span><span class="p">,</span><span class="n">y2</span> <span class="o">=</span> <span class="p">[</span><span class="n">real</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">real</span><span class="p">(</span><span class="n">y</span><span class="p">)],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">)]</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">complex_number</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">real</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">vector</span><span class="p">:</span> 
 
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x1</span><span class="p">,</span><span class="n">y1</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="c1"># Draw the hypotenuse</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x2</span><span class="p">,</span><span class="n">y2</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">)</span> <span class="c1"># Draw the projection on real-axis</span>
+        <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1"># Draw the hypotenuse</span>
+<span class="c1">#         plt.plot(x2,y2, &#39;r&#39;) # Draw the projection on real-axis</span>
 
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">real</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
 
-<span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mi">1j</span><span class="o">*</span><span class="n">theta</span><span class="p">))</span> <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span><span class="mi">100</span><span class="p">)]</span>
+<span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mi">1j</span><span class="o">*</span><span class="n">theta</span><span class="p">),</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span><span class="mi">10</span><span class="p">)]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 
-<div class="codehilite"><pre><span></span>&amp;lt;IPython.core.display.Javascript object&amp;gt;
+<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
+
+UnboundLocalError                         Traceback (most recent call last)
+
+&amp;lt;ipython-input-40-501b6b9367ed&amp;gt; in &amp;lt;module&amp;gt;()
+     38     plt.plot(real(y), imag(y), &#39;bo&#39;)
+     39 
+---&amp;gt; 40 [argand(r*exp(1j*theta), vector=True) for theta in linspace(0,2*pi,10)]
+     41 plt.show()
+
+
+&amp;lt;ipython-input-40-501b6b9367ed&amp;gt; in &amp;lt;listcomp&amp;gt;(.0)
+     38     plt.plot(real(y), imag(y), &#39;bo&#39;)
+     39 
+---&amp;gt; 40 [argand(r*exp(1j*theta), vector=True) for theta in linspace(0,2*pi,10)]
+     41 plt.show()
+
+
+&amp;lt;ipython-input-40-501b6b9367ed&amp;gt; in argand(complex_number, vector)
+     24     &#39;&#39;&#39;
+     25     z = complex_number
+---&amp;gt; 26     x = real(y)
+     27     y = imag(y)
+     28     plt.plot(x,y, &#39;bo&#39;)
+
+
+UnboundLocalError: local variable &#39;y&#39; referenced before assignment
 </pre></div>
 
 
-<div id='f4d25bb5-35cd-4027-b6b8-60abc91c4630'></div>
-
-<div class="codehilite"><pre><span></span>&amp;lt;IPython.core.display.Javascript object&amp;gt;
-</pre></div>
-
-
-<div id='b5560e18-1e70-4785-9bad-3b35a61dab06'></div>
-
+<p><img alt="png" src="output_0_1.png" /></p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
@@ -447,6 +469,8 @@
 
 
 <p><img alt="png" src="output_4_0.png" /></p>
+<div class="codehilite"><pre><span></span>
+</pre></div>
                 
                   
                 
@@ -504,7 +528,7 @@
       <div class="md-footer-copyright">
         
           <div class="md-footer-copyright__highlight">
-            Copyright &copy; 2016 - 2019 Sandeep Suman
+            Copyright &copy; 2016 - 2019 <a href="https://sandeepsuman.com">Sandeep Suman</a>
           </div>
         
         powered by
