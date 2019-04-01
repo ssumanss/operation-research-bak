@@ -252,6 +252,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#multiplication-in-complex-numbers" title="Multiplication in Complex Numbers" class="md-nav__link">
+    Multiplication in Complex Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-and-series-in-complex-numbers" title="Sequence and Series in Complex Numbers" class="md-nav__link">
+    Sequence and Series in Complex Numbers
+  </a>
+  
+</li>
+      
       
       
       
@@ -341,6 +355,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#multiplication-in-complex-numbers" title="Multiplication in Complex Numbers" class="md-nav__link">
+    Multiplication in Complex Numbers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sequence-and-series-in-complex-numbers" title="Sequence and Series in Complex Numbers" class="md-nav__link">
+    Sequence and Series in Complex Numbers
+  </a>
+  
+</li>
+      
       
       
       
@@ -360,115 +388,72 @@
                 
                   <h1>Plotting</h1>
                 
-                <div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="o">*</span>
+                <p>A complex numbers <script type="math/tex">x+iy</script> can be plotted in cartesian coordinate as the point <script type="math/tex">(x,y)</script>. This plane is called Argand plane. </p>
+<div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="kn">from</span> <span class="nn">utility</span> <span class="kn">import</span> <span class="n">argand</span>
+</pre></div>
 
 
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`</span>
-<span class="sd">This draws the axis for argand diagram</span>
-<span class="sd">~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`</span>
-<span class="sd">&#39;&#39;&#39;</span>
-<span class="n">r</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="c1"># Y = [r*exp(1j*theta) for theta in linspace(0,2*pi, 200)]</span>
-<span class="c1"># Y = array(Y)</span>
-<span class="c1"># plt.plot(real(Y), imag(Y), &#39;r&#39;)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Imaginary&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Real&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axhline</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
-
-
-<span class="k">def</span> <span class="nf">argand</span><span class="p">(</span><span class="n">complex_number</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
-    <span class="sd">&#39;&#39;&#39;</span>
-<span class="sd">    This function takes a complex number.</span>
-<span class="sd">    &#39;&#39;&#39;</span>
-    <span class="n">z</span> <span class="o">=</span> <span class="n">complex_number</span>
-    <span class="n">x</span> <span class="o">=</span> <span class="n">real</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-    <span class="n">y</span> <span class="o">=</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
-
-    <span class="k">if</span> <span class="n">vector</span><span class="p">:</span> 
-
-
-        <span class="n">plt</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span> <span class="c1"># Draw the hypotenuse</span>
-<span class="c1">#         plt.plot(x2,y2, &#39;r&#39;) # Draw the projection on real-axis</span>
-
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">imag</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="s1">&#39;bo&#39;</span><span class="p">)</span>
-
-<span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">r</span><span class="o">*</span><span class="n">exp</span><span class="p">(</span><span class="mi">1j</span><span class="o">*</span><span class="n">theta</span><span class="p">),</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">theta</span> <span class="ow">in</span> <span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">pi</span><span class="p">,</span><span class="mi">10</span><span class="p">)]</span>
+<div class="codehilite"><pre><span></span><span class="n">argand</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">10</span><span class="o">*</span><span class="mi">1j</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>    
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-
-<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
-
-UnboundLocalError                         Traceback (most recent call last)
-
-&lt;ipython-input-40-501b6b9367ed&gt; in &lt;module&gt;()
-     38     plt.plot(real(y), imag(y), &#39;bo&#39;)
-     39 
----&gt; 40 [argand(r*exp(1j*theta), vector=True) for theta in linspace(0,2*pi,10)]
-     41 plt.show()
-
-
-&lt;ipython-input-40-501b6b9367ed&gt; in &lt;listcomp&gt;(.0)
-     38     plt.plot(real(y), imag(y), &#39;bo&#39;)
-     39 
----&gt; 40 [argand(r*exp(1j*theta), vector=True) for theta in linspace(0,2*pi,10)]
-     41 plt.show()
-
-
-&lt;ipython-input-40-501b6b9367ed&gt; in argand(complex_number, vector)
-     24     &#39;&#39;&#39;
-     25     z = complex_number
----&gt; 26     x = real(y)
-     27     y = imag(y)
-     28     plt.plot(x,y, &#39;bo&#39;)
-
-
-UnboundLocalError: local variable &#39;y&#39; referenced before assignment
-</pre></div>
-
-
-<p><img alt="png" src="output_0_1.png" /></p>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-
-<span class="n">cnums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1j</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
-<span class="n">X</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">real</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cnums</span><span class="p">]</span>
-<span class="n">Y</span> <span class="o">=</span> <span class="p">[</span><span class="n">x</span><span class="o">.</span><span class="n">imag</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cnums</span><span class="p">]</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">&#39;red&#39;</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
-</pre></div>
-
-
-<p><img alt="png" src="output_1_0.png" /></p>
-<div class="codehilite"><pre><span></span><span class="n">a</span> <span class="o">=</span>  <span class="p">[</span><span class="mf">0.</span> <span class="o">+</span><span class="mf">6.j</span><span class="p">,</span>  <span class="mf">1.</span> <span class="o">+</span><span class="mf">7.j</span><span class="p">,</span>  <span class="mf">2.</span> <span class="o">+</span><span class="mf">8.j</span><span class="p">,</span>  <span class="mf">3.</span> <span class="o">+</span><span class="mf">9.j</span><span class="p">,</span>  <span class="mf">4.</span><span class="o">+</span><span class="mf">10.j</span><span class="p">]</span>
-<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">a</span><span class="p">:</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">polar</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span><span class="n">angle</span><span class="p">(</span><span class="n">x</span><span class="p">)],[</span><span class="mi">0</span><span class="p">,</span><span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)],</span><span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">)</span>
 </pre></div>
 
 
 <p><img alt="png" src="output_2_0.png" /></p>
-<h3 id="addition-and-substraction">Addition and Substraction<a class="headerlink" href="#addition-and-substraction" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">as</span> <span class="nn">plt</span>
-
-<span class="n">soa</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">9</span><span class="p">]])</span>
-<span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span> <span class="o">=</span> <span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">soa</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">()</span>
-<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">quiver</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">V</span><span class="p">,</span> <span class="n">angles</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale_units</span><span class="o">=</span><span class="s1">&#39;xy&#39;</span><span class="p">,</span> <span class="n">scale</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">cnums</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1j</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">11</span><span class="p">)</span>
+<span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">cnums</span><span class="p">]</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_4_0.png" /></p>
+<p><img alt="png" src="output_3_0.png" /></p>
+<h3 id="addition-and-substraction">Addition and Substraction<a class="headerlink" href="#addition-and-substraction" title="Permanent link">&para;</a></h3>
+<p>Addition and substraction of complex numbers in Argand plane are similar to the vector addition and multiplication. </p>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="mi">10j</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="mi">1j</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">10j</span> <span class="o">+</span> <span class="mi">10</span><span class="o">+</span><span class="mi">1j</span><span class="p">]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="png" src="output_5_0.png" /></p>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">1</span><span class="o">+</span><span class="mi">10j</span><span class="p">,</span> <span class="mi">10</span><span class="o">+</span><span class="mi">1j</span><span class="p">,</span> <span class="o">-</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">1j</span><span class="p">),</span> <span class="mi">1</span><span class="o">+</span><span class="mi">10j</span> <span class="o">-</span> <span class="p">(</span><span class="mi">10</span><span class="o">+</span><span class="mi">1j</span><span class="p">)]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="png" src="output_6_0.png" /></p>
+<h2 id="multiplication-in-complex-numbers">Multiplication in Complex Numbers<a class="headerlink" href="#multiplication-in-complex-numbers" title="Permanent link">&para;</a></h2>
+<p>If we multiply two complex number <script type="math/tex">z_1=r_1e^{i\theta_1}</script> and <script type="math/tex">z_2=r_2e^{i\theta_2}</script>, then we get 
+<script type="math/tex; mode=display">z_1\cdot z_2 = r_1\cdot r_2 e^{i (\theta_1 + \theta_2)}</script>
+Hence in polar coordinate, the magnitude will get multiplies while angle will get added.</p>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="mi">1j</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1j</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">)]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="png" src="output_8_0.png" /></p>
+<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">argand</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">vector</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">2</span><span class="o">+</span><span class="mi">1j</span><span class="p">,</span> <span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">,</span> <span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">1j</span><span class="p">)</span><span class="o">/</span><span class="p">(</span><span class="mi">1</span><span class="o">+</span><span class="mi">2j</span><span class="p">)]]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+
+
+<p><img alt="png" src="output_9_0.png" /></p>
+<h2 id="sequence-and-series-in-complex-numbers">Sequence and Series in Complex Numbers<a class="headerlink" href="#sequence-and-series-in-complex-numbers" title="Permanent link">&para;</a></h2>
+<p>Similar to real sequance, a complex sequence in simple a function <script type="math/tex">f: \mathbb{N} \to \mathbb{C}</script>.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+<span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">interact</span><span class="p">,</span> <span class="n">interactive</span><span class="p">,</span> <span class="n">fixed</span><span class="p">,</span> <span class="n">interact_manual</span>
+<span class="kn">import</span> <span class="nn">ipywidgets</span> <span class="kn">as</span> <span class="nn">widgets</span>
+
+<span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">m</span><span class="p">):</span>
+    <span class="p">[</span><span class="n">argand</span><span class="p">(((</span><span class="mi">1</span><span class="o">+</span><span class="mi">1j</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">m</span><span class="p">)];</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">interact</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">m</span><span class="o">=</span><span class="mi">10</span><span class="p">);</span>
+</pre></div>
+
+
+<div class="codehilite"><pre><span></span>interactive(children=(IntSlider(value=10, description=&#39;m&#39;, max=30, min=-10), Output()), _dom_classes=(&#39;widget-…
+</pre></div>
+
+
 <div class="codehilite"><pre><span></span>
 </pre></div>
                 
