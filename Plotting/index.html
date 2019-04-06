@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -439,16 +439,29 @@ Hence in polar coordinate, the magnitude will get multiplies while angle will ge
 <p><img alt="png" src="output_9_0.png" /></p>
 <h2 id="sequence-and-series-in-complex-numbers">Sequence and Series in Complex Numbers<a class="headerlink" href="#sequence-and-series-in-complex-numbers" title="Permanent link">&para;</a></h2>
 <p>Similar to real sequance, a complex sequence in simple a function <script type="math/tex">f: \mathbb{N} \to \mathbb{C}</script>.</p>
-<div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">argand</span><span class="p">(((</span><span class="mi">1</span><span class="o">+</span><span class="mi">1j</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">)];</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="codehilite"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">[</span><span class="n">argand</span><span class="p">(((</span><span class="mi">1</span><span class="o">+</span><span class="mi">1j</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">)]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">[</span><span class="n">argand</span><span class="p">((</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2j</span><span class="p">)</span><span class="o">/</span><span class="mi">4</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">)]</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_11_0.png" /></p>
+<div class="codehilite"><pre><span></span>  File &quot;&lt;ipython-input-110-51b739c5463e&gt;&quot;, line 6
+    [argand(((1 + 2j))/4)**n) for n in range(15)]
+                            ^
+SyntaxError: invalid syntax
+</pre></div>
+
+
+<p>Example of a diverging sequence.</p>
 <div class="codehilite"><pre><span></span><span class="p">[</span><span class="n">argand</span><span class="p">((</span><span class="mi">1</span><span class="o">+</span><span class="mi">1j</span><span class="p">)</span><span class="o">**</span><span class="n">n</span><span class="p">)</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">)];</span> <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
 
-<p><img alt="png" src="output_12_0.png" /></p>
+<p><img alt="png" src="output_13_0.png" /></p>
 <div class="codehilite"><pre><span></span>
 </pre></div>
                 
@@ -524,7 +537,7 @@ Hence in polar coordinate, the magnitude will get multiplies while angle will ge
       
     </div>
     
-      <script src="../assets/javascripts/application.2ba8dec4.js"></script>
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
