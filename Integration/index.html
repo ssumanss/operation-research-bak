@@ -32,7 +32,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.0">
     
     
       
@@ -40,7 +40,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.982221ab.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
@@ -285,6 +285,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../assignments/" title="Assignments" class="md-nav__link">
+      Assignments
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -305,87 +317,80 @@
 <span class="kn">import</span> <span class="nn">sympy.vector</span> <span class="kn">as</span> <span class="nn">sv</span>
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="n">t</span> <span class="o">=</span> <span class="n">symbols</span><span class="p">(</span><span class="s1">&#39;x y z t&#39;</span><span class="p">)</span>
 <span class="n">R</span> <span class="o">=</span> <span class="n">sv</span><span class="o">.</span><span class="n">CoordSys3D</span><span class="p">(</span><span class="s1">&#39;R&#39;</span><span class="p">)</span>
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">v</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">):</span> <span class="c1"># vector field as a function of scalar variables x,y,z </span>
     <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">i</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">j</span> <span class="o">+</span> <span class="mi">3</span><span class="o">*</span><span class="n">x</span><span class="o">*</span><span class="n">z</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">k</span>
 </pre></div>
-
 
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">voft</span><span class="p">(</span><span class="n">l</span><span class="p">):</span> <span class="c1"># vector field along path l as a function of t</span>
     <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span> <span class="o">=</span> <span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">i</span><span class="p">),</span><span class="n">l</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">j</span><span class="p">),</span><span class="n">l</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">R</span><span class="o">.</span><span class="n">k</span><span class="p">))</span> <span class="c1"># x,y,z as functions of t </span>
     <span class="k">return</span> <span class="n">v</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">z</span><span class="p">)</span>
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">li</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">v</span><span class="p">):</span> <span class="c1"># dl/dt</span>
     <span class="n">dl</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">l</span><span class="p">,</span><span class="n">t</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">integrate</span><span class="p">(</span><span class="n">voft</span><span class="p">(</span><span class="n">l</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dl</span><span class="p">),(</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
-
 
 <div class="codehilite"><pre><span></span><span class="n">l1</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">j</span>
 <span class="n">l2</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">j</span> <span class="o">+</span> <span class="mi">2</span><span class="o">*</span><span class="n">t</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">k</span> 
 <span class="n">l3</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span><span class="o">-</span><span class="n">t</span><span class="p">)</span><span class="o">*</span><span class="n">R</span><span class="o">.</span><span class="n">k</span>
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="n">li</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span><span class="n">v</span><span class="p">),</span><span class="n">li</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span><span class="n">v</span><span class="p">),</span><span class="n">li</span><span class="p">(</span><span class="n">l3</span><span class="p">,</span><span class="n">v</span><span class="p">)</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">\left ( 0, \quad - \frac{8}{3}, \quad 0\right )</div>
 <script type="math/tex; mode=display">\left ( 0, \quad - \frac{8}{3}, \quad 0\right )</script>
-</p>
+</div>
 <div class="codehilite"><pre><span></span><span class="n">l1</span><span class="p">,</span><span class="n">l2</span><span class="p">,</span><span class="n">l3</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">\left ( (2 t)\mathbf{\hat{j}_{R}}, \quad (- 2 t + 2)\mathbf{\hat{j}_{R}} + (2 t)\mathbf{\hat{k}_{R}}, \quad (- 2 t + 2)\mathbf{\hat{k}_{R}}\right )</div>
 <script type="math/tex; mode=display">\left ( (2 t)\mathbf{\hat{j}_{R}}, \quad (- 2 t + 2)\mathbf{\hat{j}_{R}} + (2 t)\mathbf{\hat{k}_{R}}, \quad (- 2 t + 2)\mathbf{\hat{k}_{R}}\right )</script>
-</p>
+</div>
 <div class="codehilite"><pre><span></span><span class="n">dl1</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">l1</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> 
 <span class="n">dl2</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">l2</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> 
 <span class="n">dl3</span> <span class="o">=</span> <span class="n">diff</span><span class="p">(</span><span class="n">l3</span><span class="p">,</span><span class="n">t</span><span class="p">)</span> 
 <span class="n">dl1</span><span class="p">,</span><span class="n">dl2</span><span class="p">,</span><span class="n">dl3</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">\left ( (2)\mathbf{\hat{j}_{R}}, \quad (-2)\mathbf{\hat{j}_{R}} + (2)\mathbf{\hat{k}_{R}}, \quad (-2)\mathbf{\hat{k}_{R}}\right )</div>
 <script type="math/tex; mode=display">\left ( (2)\mathbf{\hat{j}_{R}}, \quad (-2)\mathbf{\hat{j}_{R}} + (2)\mathbf{\hat{k}_{R}}, \quad (-2)\mathbf{\hat{k}_{R}}\right )</script>
-</p>
+</div>
 <div class="codehilite"><pre><span></span> <span class="n">voft</span><span class="p">(</span><span class="n">l1</span><span class="p">),</span><span class="n">voft</span><span class="p">(</span><span class="n">l2</span><span class="p">),</span><span class="n">voft</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">\left ( \mathbf{\hat{0}}, \quad (2 t \left(- 4 t + 4\right))\mathbf{\hat{j}_{R}}, \quad \mathbf{\hat{0}}\right )</div>
 <script type="math/tex; mode=display">\left ( \mathbf{\hat{0}}, \quad (2 t \left(- 4 t + 4\right))\mathbf{\hat{j}_{R}}, \quad \mathbf{\hat{0}}\right )</script>
-</p>
+</div>
 <div class="codehilite"><pre><span></span><span class="n">voft</span><span class="p">(</span><span class="n">l1</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">l1</span><span class="p">),</span><span class="n">voft</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">l2</span><span class="p">),</span><span class="n">voft</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">l3</span><span class="p">)</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">\left ( 0, \quad 2 t \left(- 4 t + 4\right) \left(- 2 t + 2\right), \quad 0\right )</div>
 <script type="math/tex; mode=display">\left ( 0, \quad 2 t \left(- 4 t + 4\right) \left(- 2 t + 2\right), \quad 0\right )</script>
-</p>
+</div>
 <div class="codehilite"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">voft</span><span class="p">(</span><span class="n">l2</span><span class="p">)</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">dl2</span><span class="p">),(</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">- \frac{8}{3}</div>
 <script type="math/tex; mode=display">- \frac{8}{3}</script>
-</p>
-<p>A contour is a finite collection of paths joined end to end. A path can be represented as a continuous function form an closed iterval to <script type="math/tex">\mathbb{C}</script> as follows 
+</div>
+<p>A contour is a finite collection of paths joined end to end. A path can be represented as a continuous function form an closed iterval to <span><span class="MathJax_Preview">\mathbb{C}</span><script type="math/tex">\mathbb{C}</script></span> as follows 
 <script type="math/tex; mode=display"> \gamma: [a~ b]\subset \mathbb{R} \to \mathbb{C}; \quad \gamma = \gamma(t)</script> 
 Then the integration of any complex function along this path is is given by 
-<script type="math/tex; mode=display">\int_\gamma f(z)dz = \int_a^b f(t)~\gamma'(t)~dt = \sum_{i=1}^n f(t_i) \left[\gamma(t_i)-\gamma(t_{i-1})\right]</script>
-</p>
-<p><strong>Question:</strong> Find the integration of <script type="math/tex">f(z)=z^2</script> along the parabolic path from <script type="math/tex">0</script> to <script type="math/tex">1</script>.</p>
-<p><strong>Answer:</strong> In order to find the integration we have to find to parametrize the curve as <script type="math/tex">\gamma(t)=t+t^2i</script>, <script type="math/tex">t\in [0,1]</script>.</p>
+<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\int_\gamma f(z)dz = \int_a^b f(t)~\gamma'(t)~dt = \sum_{i=1}^n f(t_i) \left[\gamma(t_i)-\gamma(t_{i-1})\right]</span><script type="math/tex">\int_\gamma f(z)dz = \int_a^b f(t)~\gamma'(t)~dt = \sum_{i=1}^n f(t_i) \left[\gamma(t_i)-\gamma(t_{i-1})\right]</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\int_\gamma f(z)dz = \int_a^b f(t)~\gamma'(t)~dt = \sum_{i=1}^n f(t_i) \left[\gamma(t_i)-\gamma(t_{i-1})\right]</span><script type="math/tex">\int_\gamma f(z)dz = \int_a^b f(t)~\gamma'(t)~dt = \sum_{i=1}^n f(t_i) \left[\gamma(t_i)-\gamma(t_{i-1})\right]</script></span></script></span></p>
+<p><strong>Question:</strong> Find the integration of <span><span class="MathJax_Preview">f(z)=z^2</span><script type="math/tex">f(z)=z^2</script></span> along the parabolic path from <span><span class="MathJax_Preview">0</span><script type="math/tex">0</script></span> to <span><span class="MathJax_Preview">1</span><script type="math/tex">1</script></span>.</p>
+<p><strong>Answer:</strong> In order to find the integration we have to find to parametrize the curve as <span><span class="MathJax_Preview">\gamma(t)=t+t^2i</span><script type="math/tex">\gamma(t)=t+t^2i</script></span>, <span><span class="MathJax_Preview">t\in [0,1]</span><script type="math/tex">t\in [0,1]</script></span>.</p>
 <div class="codehilite"><pre><span></span><span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span> 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
@@ -425,13 +430,11 @@ Then the integration of any complex function along this path is is given by
 <span class="c1"># [(f(x+1j*y).real, f(x+1j*y).imag) for x in X for y in Y ]</span>
 </pre></div>
 
-
 <p><img alt="png" src="output_14_0.png" /></p>
 <p>Here we will do the numerical computation</p>
 <div class="codehilite"><pre><span></span><span class="err">Δ</span><span class="n">t</span> <span class="o">=</span> <span class="n">cnums</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span><span class="o">-</span><span class="n">cnums</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
 <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">imgs</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span><span class="err">Δ</span><span class="n">t</span><span class="p">)</span>
 </pre></div>
-
 
 <div class="codehilite"><pre><span></span>(-0.6818686799806022+0.675438053988273j)
 </pre></div>
@@ -441,10 +444,10 @@ Then the integration of any complex function along this path is is given by
 <div class="codehilite"><pre><span></span><span class="n">integrate</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="err">γ</span><span class="p">(</span><span class="n">t</span><span class="p">))</span><span class="o">*</span><span class="n">diff</span><span class="p">(</span><span class="err">γ</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">t</span><span class="p">),(</span><span class="n">t</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">))</span>
 </pre></div>
 
-
-<p>
+<div>
+<div class="MathJax_Preview">-0.666666666666667 + 0.666666666666667 i</div>
 <script type="math/tex; mode=display">-0.666666666666667 + 0.666666666666667 i</script>
-</p>
+</div>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">animation</span>
@@ -478,7 +481,6 @@ Then the integration of any complex function along this path is is given by
 <span class="n">fig</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
-
 
 <p><img alt="png" src="output_19_0.png" /></p>
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.plotly</span> <span class="kn">as</span> <span class="nn">py</span>
@@ -570,11 +572,9 @@ Then the integration of any complex function along this path is is given by
 <span class="n">py</span><span class="o">.</span><span class="n">icreate_animations</span><span class="p">(</span><span class="n">figure</span><span class="p">,</span> <span class="s1">&#39;points_changing_size&#39;</span><span class="o">+</span><span class="nb">str</span><span class="p">(</span><span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()))</span>
 </pre></div>
 
-
 <div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">plotly</span>
 <span class="n">plotly</span><span class="o">.</span><span class="n">__version__</span>
 </pre></div>
-
 
 <div class="codehilite"><pre><span></span>&#39;3.7.0&#39;
 </pre></div>
@@ -582,7 +582,6 @@ Then the integration of any complex function along this path is is given by
 
 <div class="codehilite"><pre><span></span>
 </pre></div>
-
 
 <div class="codehilite"><pre><span></span>
 </pre></div>
@@ -621,6 +620,20 @@ Then the integration of any complex function along this path is is given by
           </a>
         
         
+          <a href="../assignments/" title="Assignments" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Assignments
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
       </nav>
     </div>
   
@@ -645,7 +658,7 @@ Then the integration of any complex function along this path is is given by
       
     </div>
     
-      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
+      <script src="../assets/javascripts/application.2ba8dec4.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
