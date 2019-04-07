@@ -328,6 +328,18 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../exam/" title="Exam" class="md-nav__link">
+      Exam
+    </a>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -372,12 +384,10 @@
                 
                   <h1>Definition</h1>
                 
-                <p>In this section we will define complex numbers as an extension of <span><span class="MathJax_Preview">\mathbb{R}</span><script type="math/tex">\mathbb{R}</script></span> as the following
-<span><span class="MathJax_Preview"><span><span class="MathJax_Preview">\mathbb{C} \cong \mathbb{R}[x] / \langle x^2+1 \rangle = \{a+bx+\langle x^2+1 \rangle\ | ~
-a,b \in \mathbb{R} \}</span><script type="math/tex">\mathbb{C} \cong \mathbb{R}[x] / \langle x^2+1 \rangle = \{a+bx+\langle x^2+1 \rangle\ | ~
-a,b \in \mathbb{R} \}</script></span></span><script type="math/tex"><span><span class="MathJax_Preview">\mathbb{C} \cong \mathbb{R}[x] / \langle x^2+1 \rangle = \{a+bx+\langle x^2+1 \rangle\ | ~
-a,b \in \mathbb{R} \}</span><script type="math/tex">\mathbb{C} \cong \mathbb{R}[x] / \langle x^2+1 \rangle = \{a+bx+\langle x^2+1 \rangle\ | ~
-a,b \in \mathbb{R} \}</script></span></script></span></p>
+                <p>In this section we will define complex numbers as an extension of <script type="math/tex">\mathbb{R}</script> as the following
+<script type="math/tex; mode=display">\mathbb{C} \cong \mathbb{R}[x] / \langle x^2+1 \rangle = \{a+bx+\langle x^2+1 \rangle\ | ~
+a,b \in \mathbb{R} \}</script>
+</p>
 <div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">sympy</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="n">init_printing</span><span class="p">()</span>
 </pre></div>
@@ -392,28 +402,25 @@ a,b \in \mathbb{R} \}</script></span></script></span></p>
 <span class="n">Eq</span><span class="p">(</span><span class="n">ad</span><span class="p">,</span> <span class="n">collect</span><span class="p">(</span><span class="n">ad</span><span class="p">,</span><span class="n">x</span><span class="p">))</span>
 </pre></div>
 
-<div>
-<div class="MathJax_Preview">a + b x + c + d x = a + c + x \left(b + d\right)</div>
+<p>
 <script type="math/tex; mode=display">a + b x + c + d x = a + c + x \left(b + d\right)</script>
-</div>
+</p>
 <p>Multiplication is done as follows</p>
 <div class="codehilite"><pre><span></span><span class="n">mul</span> <span class="o">=</span> <span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="p">(</span><span class="n">c</span><span class="o">+</span><span class="n">d</span><span class="o">*</span><span class="n">x</span><span class="p">)</span>
 <span class="n">Eq</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span> <span class="n">expand</span><span class="p">(</span><span class="n">mul</span><span class="p">))</span>
 </pre></div>
 
-<div>
-<div class="MathJax_Preview">\left(a + b x\right) \left(c + d x\right) = a c + a d x + b c x + b d x^{2}</div>
+<p>
 <script type="math/tex; mode=display">\left(a + b x\right) \left(c + d x\right) = a c + a d x + b c x + b d x^{2}</script>
-</div>
+</p>
 <div class="codehilite"><pre><span></span><span class="n">irr</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span><span class="o">+</span><span class="mi">1</span>
 <span class="n">quo</span><span class="p">,</span> <span class="n">rem</span> <span class="o">=</span> <span class="n">pdiv</span><span class="p">(</span><span class="n">mul</span><span class="p">,</span><span class="n">irr</span><span class="p">)</span>
 <span class="n">collect</span><span class="p">(</span><span class="n">rem</span><span class="p">,</span><span class="n">x</span><span class="p">)</span>
 </pre></div>
 
-<div>
-<div class="MathJax_Preview">a c - b d + x \left(a d + b c\right)</div>
+<p>
 <script type="math/tex; mode=display">a c - b d + x \left(a d + b c\right)</script>
-</div>
+</p>
 <div class="codehilite"><pre><span></span>
 </pre></div>
                 
