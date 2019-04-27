@@ -25,6 +25,7 @@ The course ==Complex Analysis== focussed on the study of properties of complex f
 
 - Foundations Of Complex Analysis by S. Ponnusamy
 - Complex Variable: Schaum's Outlines Series
+- [Complex Analysis by Beck](http://math.sfsu.edu/beck/papers/complex.pdf)
 
 ## Routine
 
