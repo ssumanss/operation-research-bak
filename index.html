@@ -67,6 +67,31 @@
     
     
       
+        
+<script>
+  window.ga = window.ga || function() {
+    (ga.q = ga.q || []).push(arguments)
+  }
+  ga.l = +new Date
+  /* Setup integration and send page view */
+  ga("create", "UA-140256543-1", "sandeepsuman.com")
+  ga("set", "anonymizeIp", true)
+  ga("send", "pageview")
+  /* Register handler to log search on blur */
+  document.addEventListener("DOMContentLoaded", () => {
+    if (document.forms.search) {
+      var query = document.forms.search.query
+      query.addEventListener("blur", function() {
+        if (this.value) {
+          var path = document.location.pathname;
+          ga("send", "pageview", path + "?q=" + this.value)
+        }
+      })
+    }
+  })
+</script>
+<script async src="https://www.google-analytics.com/analytics.js"></script>
+      
     
     
   </head>
@@ -466,7 +491,6 @@
 <ul>
 <li>Foundations Of Complex Analysis by S. Ponnusamy</li>
 <li>Complex Variable: Schaum's Outlines Series</li>
-<li><a href="http://math.sfsu.edu/beck/papers/complex.pdf">Complex Analysis by Beck</a></li>
 </ul>
 <h2 id="routine">Routine<a class="headerlink" href="#routine" title="Permanent link">&para;</a></h2>
 <table>
