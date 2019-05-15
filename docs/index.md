@@ -40,4 +40,4 @@ The course ==Complex Analysis== focussed on the study of properties of complex f
 
 ## Instructor
 
-Sandeep Suman, Assistant Professor, TMBU, Bhagalpur
+[Sandeep Suman](https://sandeepsuman.com), Assistant Professor, TMBU, Bhagalpur
