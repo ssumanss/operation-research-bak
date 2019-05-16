@@ -2,8 +2,7 @@
 
 !!! note "Cauchy Integral Formula"
     Let $f$ is analytic inside and on a positively oriented contour $\gamma$ and a is inside $\gamma$, then
-
-$$f(a) = \frac{1}{2\pi i} \oint_\gamma \dfrac{f(z)}{z-a}$$
+    $$f(a) = \frac{1}{2\pi i} \oint_\gamma \dfrac{f(z)}{z-a}$$
 
 Proof: Consider,
 
@@ -28,4 +27,4 @@ $$
 \end{align}
 $$
 
-Since $f$ is continuous in the disc enlosed by $\overline{\gamma}$, 
+Since $f$ is continuous in the disc enlosed by $\overline{\gamma}$,
