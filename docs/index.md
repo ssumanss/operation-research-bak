@@ -1,6 +1,6 @@
 # Welcome to complex analysis course
 
-This page is dedicated to the course of complex analysis taught in the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
+This page is dee course of complex analysis taught in the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
 
 ## Syllabus
 
@@ -29,15 +29,15 @@ The course ==Complex Analysis== focussed on the study of properties of complex f
 
 ## Routine
 
-| Weekday | 1st Period | 2nd Period | 3rd Period | 4th Period | 5th Period | 6th Period |
-|---------|------------|------------|------------|------------|------------|------------|
-| MON     |            |            | CA         |            |            |            |
-| TUE     |            |            | CA         |            |            |            |
-| WED     | CA         |            |            |            |            |            |
-| THR     | CA         |            |            |            |            |            |
-| FRI     |            | CA         |            |            |            |            |
-| SAT     |            | CA         |            |            |            |            |
+| Weekday | 1st Period | 2nd Period | 3rd Period | 4th Period | 5th Period |
+|---------|------------|------------|------------|------------|------------|
+| MON     |            |            | CA         |            |            |
+| TUE     |            |            | CA         |            |            |
+| WED     | CA         |            |            |            |            |
+| THR     | CA         |            |            |            |            |
+| FRI     |            | CA         |            |            |            |
+| SAT     |            | CA         |            |            |            |
 
 ## Instructor
 
-Sandeep Suman, Assistant Professor, TMBU, Bhagalpur
+[Sandeep Suman](https://sandeepsuman.com), Assistant Professor, TMBU, Bhagalpur
