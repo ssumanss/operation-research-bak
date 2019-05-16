@@ -1,6 +1,6 @@
 # Assignments
 
-As a part of continuous assesment you have to submit the assignment 
+As a part of continuous assessment you have to submit the assignment 
 
 | S. No. 	| Donwload Link 	| Due Date 	|
 |--------	|---------------	|----------	|

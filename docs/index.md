@@ -5,9 +5,9 @@ This page is dee course of complex analysis taught in the university department 
 ## Syllabus
 
 - Contour Integration
-- Cauchy Integral Forumula and Related Theorems
+- Cauchy Integral Formula and Related Theorems
 - Power and Laurents Series
-- Sigularites
+- Singularities
 - Rouches theorem
 
 ## Course Objectives
@@ -18,8 +18,8 @@ The course ==Complex Analysis== focussed on the study of properties of complex f
 - [ ] Apply Cauchy integral formula
 - [ ] Import results based on CIF
 - [ ] Ability to represent complex function as Power and Laurents series
-- [ ] Understand different type of singularity 
-- [ ] Finding the integraton along closed contour
+- [ ] Understand different type of singularity
+- [ ] Finding the integration along closed contour
 
 ## References
 
