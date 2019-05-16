@@ -10,11 +10,11 @@
 $$
 \begin{align}
     \oint_\gamma \dfrac{f(z)}{z-a} &= \oint_\gamma \dfrac{f(z)}{z-a}dz\\
-    &= \oint_\gamma \dfrac{f(z) \color{blue}{- f(a) + f(a)}}{z-a}dz\\
-    &= \color{red}{\oint_\gamma \dfrac{f(a)}{z-a}dz} + \oint_\gamma \dfrac{f(z) - f(a)}{z-a}dz\\
-    &= \color{red}{f(a) \oint_\gamma \dfrac{1}{z-a}dz} + \oint_\gamma \dfrac{f(z) - f(a)}{z-a}dz\\
-    &= \color{red}{f(a)\times 2\pi i} + \oint_\gamma \dfrac{f(z) - f(a)}{z-a}dz\\
-    &= \color{red}{f(a)\times 2\pi i} + I\\
+    &= \oint_\gamma \dfrac{f(z) - f(a) + \color{blue}{ f(a)}}{z-a}dz\\
+    &= \color{blue}{\oint_\gamma \dfrac{f(a)}{z-a}dz} + \oint_\gamma \dfrac{f(z) - f(a)}{z-a}dz\\
+    &= \color{blue}{f(a) \oint_\gamma \dfrac{1}{z-a}dz} + \oint_\gamma \dfrac{f(z) - f(a)}{z-a}dz\\
+    &= \color{blue}{f(a)\times 2\pi i} + \oint_\gamma \dfrac{f(z) - f(a)}{z-a}dz\\
+    &= \color{blue}{f(a)\times 2\pi i} + I\\
 \end{align}
 $$
 Now we will estimate the second part of the expression in RHS. We use deformation theorem to integrate it along a circular path $\overline{\gamma}: \vert z-a \vert = r$, then we get
