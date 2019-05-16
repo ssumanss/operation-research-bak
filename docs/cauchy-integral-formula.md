@@ -4,7 +4,7 @@
     Let $f$ is analytic inside and on a positively oriented contour $\gamma$ and a is inside $\gamma$, then
     $$f(a) = \frac{1}{2\pi i} \oint_\gamma \dfrac{f(z)}{z-a}$$
 
-Proof: Consider,
+**Proof:** Consider,
 
 $$
 \begin{align}
