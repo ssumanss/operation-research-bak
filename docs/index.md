@@ -10,7 +10,7 @@ This page is dee course of complex analysis taught in the university department 
 - Singularities
 - Rouches theorem
 
-## Course Objectives
+## Objectives
 
 The course ==Complex Analysis== focussed on the study of properties of complex functions. This is the second course on complex analysis in TMBU, Bhagalpur. The first course mainly introduce the concept of differentiability and analyticity in complex domains. Here we will discuss the integration in the sense of complex functions.
 
