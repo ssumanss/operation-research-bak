@@ -1,6 +1,8 @@
 # Cauchy Integral Formula
 
-!!! note "Cauchy Integral Formula"
+## Statement
+
+!!! success "Cauchy Integral Formula"
     Let $f$ is analytic inside and on a positively oriented contour $\gamma$ and a is inside $\gamma$, then
     $$f(a) = \frac{1}{2\pi i} \oint_\gamma \dfrac{f(z)}{z-a}$$
 
@@ -28,3 +30,17 @@ $$
 $$
 
 Since $f$ is continuous in the disc enlosed by $\overline{\gamma}$,
+
+***
+
+## Derivatives
+
+The general cauchy integral formula given as follows
+
+!!! success "Cauchy Integral Formula for Derivatives"
+    Let $f$ is analytic inside and on a positively oriented contour $\gamma$ and a is inside $\gamma$, then
+    $$f^{(n)}(a) = \frac{n!}{2\pi i} \oint_\gamma \dfrac{f(z)}{(z-a)^{n+1}}dz$$
+
+***
+## Questions
+**Exercise:**
