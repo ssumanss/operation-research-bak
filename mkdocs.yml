@@ -1,13 +1,14 @@
 site_name: Complex Analysis
-nav: 
+nav:
   - Home: index.md
-  - Fundamentsls: 
+  - Fundamentsls:
     - 'Definition': 'Introduction.ipynb'
     - 'Plotting': 'Plotting.ipynb'
     - 'Function': 'Function.ipynb'
   - Integration:
     - 'Definition': 'Integration.ipynb'
     - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
+    - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
   - Assignments: assignments.md
   - Exam: exam.md
 
@@ -20,7 +21,7 @@ theme:
 
   palette:
     primary: 'teal'
-    accent: 'teal'  
+    accent: 'teal'
 
   font:
     text: 'Ubuntu'
@@ -51,12 +52,12 @@ markdown_extensions:
   - codehilite:
       guess_lang: false
   - toc:
-      permalink: true    
+      permalink: true
 
 extra_javascript:
   - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
 
-extra_css: 
+extra_css:
   - 'stylesheets/extra.css' # depends on theme
 
 
