@@ -1,6 +1,6 @@
 # Welcome to complex analysis course
 
-This page is dedicated course of complex analysis taught in the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
+This page is dedicated to the course of complex analysis taught at the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
 
 ## Syllabus
 
