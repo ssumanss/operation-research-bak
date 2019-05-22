@@ -17,7 +17,8 @@ plugins:
   - mknotebooks # pip install mknotebooks
 
 theme:
-  name: 'material'
+  name: material
+  custom_dir: 'mkdocs-material/material/'
 
   palette:
     primary: 'teal'
