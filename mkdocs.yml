@@ -20,8 +20,6 @@ theme:
   name: material
   custom_dir: 'theme'
 
-  static_templates:
-  - 404.html
 
   palette:
     primary: 'teal'
@@ -30,6 +28,9 @@ theme:
   font:
     text: 'Ubuntu'
     code: 'Ubuntu Mono'
+
+  static_templates:
+  - 404.html
 
 markdown_extensions:
   - admonition
