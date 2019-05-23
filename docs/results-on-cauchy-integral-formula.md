@@ -30,3 +30,8 @@ Cauchy Integral formula is prominent in complex analysis. It results in many pro
 
 !!! success "Maximum Modulus Theorem"
     For an analytic function, the maximum value of modulus of the function occur on the boundary of the domain.
+
+**Proof:** To prove this theorem we have to first prove the local maximum modulus theorem, which says the following
+
+!!! tip "Local Maximum Modulus Theorem"
+    For an analytic function defined on a domain $\Omega$ 

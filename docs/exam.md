@@ -2,13 +2,13 @@
 
 The course has two exams one is internal of 15 marks, while the other is final worth 70 marks. Rest marks are part of continuous assessment that belongs to attendance, seminar and assignments. Practice the following question for exams
 
-- Unit 1
-  - Calculating contour integral using parametrization of curve.
-  - Use path independence when antiderivative exists.
-  - Use Cauchy theorem when function is analytic
-- Unit 2
-  - Use Cauchy integral formula to find integration along closed contour.
-  - Use Cauchy integral formula to find integration along closed contour.
+* Unit 1
+    * Calculating contour integral using parametrization of curve.
+    * Use path independence when antiderivative exists.
+    * Use Cauchy theorem when function is analytic
+* Unit 2
+    * Use Cauchy integral formula to find integration along closed contour.
+    * Use Cauchy integral formula to find integration along closed contour.
 
 
 ## Internal Exam
