@@ -1,4 +1,5 @@
 site_name: Complex Analysis
+site_url: https://sandeepsuman.com/complex-analysis/
 nav:
   - Home: index.md
   - Fundamentals:
