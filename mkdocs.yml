@@ -1,12 +1,12 @@
 site_name: Complex Analysis
 nav:
   - Home: index.md
-  - Fundamentsls:
+  - Fundamentals:
     - 'Definition': 'Introduction.ipynb'
     - 'Plotting': 'Plotting.ipynb'
     - 'Function': 'Function.ipynb'
   - Integration:
-    - 'Definition': 'Integration.ipynb'
+    - 'Contour Integration': 'Integration.ipynb'
     - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
     - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
     - 'Maximum Modulus Theorem': 'maximum-modulus-theorem.md'
