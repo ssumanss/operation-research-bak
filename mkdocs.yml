@@ -9,6 +9,7 @@ nav:
     - 'Definition': 'Integration.ipynb'
     - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
     - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
+    - 'Maximum Modulus Theorem': 'maximum-modulus-theorem.md'
   - Assignments: assignments.md
   - Exam: exam.md
 
