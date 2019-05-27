@@ -11,6 +11,8 @@ nav:
     - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
     - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
     - 'Maximum Modulus Theorem': 'maximum-modulus-theorem.md'
+  - Series:
+    - 'Power Series': 'power-series.md'
   - Assignments: assignments.md
   - Exam: exam.md
 
