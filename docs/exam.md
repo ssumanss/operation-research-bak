@@ -19,7 +19,7 @@ Internal exam consist of 5 objectives and 3 descriptive questions, out of which 
 
 Final exam divided in three groups. The questions are organized in three groups as follows:
 
-| Group | No of <br> Questions | Marks per <br> Question | Total |
+| Group |       Questions      |          Marks          | Total |
 |-------|:--------------------:|:-----------------------:|-------|
 | A     |         10/10        |            2            | 20    |
 | B     |         04/05        |            5            | 20    |
