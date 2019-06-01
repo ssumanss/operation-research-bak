@@ -91,11 +91,11 @@ self.addEventListener('install', function(e) {
     e.waitUntil(
       caches.open('complex-analysis').then(function(cache) {
         return cache.addAll([
-          './',
-          './index.html',
-          './index.html?homescreen=1',
-          './?homescreen=1',
-          './assets/fonts/specimen/MaterialIcons-Regular.woff2'
+          '/complex-analysis/',
+          '/complex-analysis/index.html',
+          '/complex-analysis/index.html?homescreen=1',
+          '/complex-analysis/?homescreen=1',
+          '/complex-analysis/assets/fonts/specimen/MaterialIcons-Regular.woff2'
         ]);
       })
     );
