@@ -1,6 +1,6 @@
 try {
   navigator.serviceWorker
-           .register('../../sw.js')
+           .register('/complex-analysis/sw.js')
            .then(function() { console.log("Service Worker Registered"); });
 } catch (error) {
  console.log(error.message) 
