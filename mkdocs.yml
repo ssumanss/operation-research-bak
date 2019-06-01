@@ -3,14 +3,17 @@ site_url: https://sandeepsuman.com/complex-analysis/
 nav:
   - Home: index.md
   - Fundamentals:
-    - 'Definition': 'Introduction.ipynb'
-    - 'Plotting': 'Plotting.ipynb'
-    - 'Function': 'Function.ipynb'
+    - 'Definition and Algebra': 'Introduction.ipynb'
+    - 'Argand Plane': 'Plotting.ipynb'
+    - 'Complex Functions': 'Function.ipynb'
   - Integration:
     - 'Contour Integration': 'Integration.ipynb'
     - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
     - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
     - 'Maximum Modulus Theorem': 'maximum-modulus-theorem.md'
+  - Series:
+    - 'Power Series': 'power-series.md'
+    - 'Taylor Theorem': 'taylor.md'
   - Assignments: assignments.md
   - Exam: exam.md
 
