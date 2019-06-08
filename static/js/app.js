@@ -1,7 +1,7 @@
-try {
-  navigator.serviceWorker
-           .register('/complex-analysis/sw.js')
-           .then(function() { console.log("Service Worker Registered"); });
-} catch (error) {
- console.log(error.message) 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js').then(function(registration) {
+    console.log('ServiceWorker registration successful!');
+  }).catch(function(err) {
+    console.log('ServiceWorker registration failed: ', err);
+  });
 }
