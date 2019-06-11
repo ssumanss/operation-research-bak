@@ -37,7 +37,7 @@ theme:
   static_templates:
     - 404.html
     
-  favicon: 'static/images/favicon.ico'
+  favicon: '/complex-analysis/static/images/favicon.ico'
 
 markdown_extensions:
   - admonition
@@ -70,10 +70,10 @@ markdown_extensions:
 
 extra_javascript:
   - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
-  - 'static/js/app.js'
+  - '/complex-analysis/static/js/app.js'
 
 extra_css:
-  - 'static/stylesheets/extra.css' # depends on theme
+  - '/complex-analysis/static/stylesheets/extra.css' # depends on theme
 
 
 google_analytics: ['UA-140256543-1', 'sandeepsuman.com']
