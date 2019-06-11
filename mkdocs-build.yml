@@ -1,0 +1,85 @@
+site_name: Complex Analysis
+site_url: https://sandeepsuman.com/complex-analysis/
+nav:
+  - Home: index.md
+  - Fundamentals:
+    - 'Definition and Algebra': 'Introduction.ipynb'
+    - 'Argand Plane': 'Plotting.ipynb'
+    - 'Complex Functions': 'Function.ipynb'
+  - Integration:
+    - 'Contour Integration': 'Integration.ipynb'
+    - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
+    - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
+    - 'Maximum Modulus Theorem': 'maximum-modulus-theorem.md'
+  - Series:
+    - 'Power Series': 'power-series.md'
+    - 'Taylor Theorem': 'taylor.md'
+  - Assignments: assignments.md
+  - Exam: exam.md
+
+plugins:
+  - search
+  - mknotebooks # pip install mknotebooks
+
+theme:
+  name: material
+  custom_dir: 'theme'
+
+
+  palette:
+    primary: 'teal'
+    accent: 'teal'
+
+  font:
+    text: 'Ubuntu'
+    code: 'Ubuntu Mono'
+
+  static_templates:
+    - 404.html
+    
+  favicon: 'static/images/favicon.ico'
+
+markdown_extensions:
+  - admonition
+  # - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+  - mdx_math: # pip install python-markdown-math
+      enable_dollar_delimiter: true
+
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+
+  - meta      
+
+extra_javascript:
+  - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
+  - 'static/js/app.js'
+
+extra_css:
+  - 'static/stylesheets/extra.css' # depends on theme
+
+
+google_analytics: ['UA-140256543-1', 'sandeepsuman.com']
+
+# Copyright
+copyright: 'Copyright &copy; 2016 - 2019 <a href="https://sandeepsuman.com">Sandeep Suman</a>'
+
+extra:
+  manifest: 'manifest.webmanifest'
