@@ -9,7 +9,7 @@ serve:
 	mkdocs serve
 
 publish:
-	mkdocs gh-deploy --config-file mkdocs-build.yml --clean --verbose
+	mkdocs gh-deploy --config-file ./mkdocs-build.yml --clean --verbose
 
 change:
 	git commit -am "change made."
