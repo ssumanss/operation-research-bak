@@ -1,31 +1,35 @@
 # Welcome to complex analysis course
 
-This page is dedicated to the course of complex analysis taught at the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
+This page is dedicated to the course of operaton research taught at the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
 
 ## Syllabus
 
-- Contour Integration
-- Cauchy Integral Formula and Related Theorems
-- Power and Laurents Series
-- Singularities
-- Rouches theorem
+- Simplex Algorithm, Big-M, Two Phase Method
+- Dual Simplex and other algorithm
+- Transportaion and Assignment Problems
+- Game Theory
+- Determinsic and Probabilistic Dynamic Programming
+- Nonlinear Programming
+- KKT Conditions
 
 ## Objectives
 
-The course ==Complex Analysis== focussed on the study of properties of complex functions. This is the second course on complex analysis in TMBU, Bhagalpur. The first course mainly introduce the concept of differentiability and analyticity in complex domains. Here we will discuss the integration in the sense of complex functions.
+The course ==Operation Research== focussed on the study of different kinds of optimization methods. First two unit is realted to linear programming and simplex method. 
 
-- [x] Understand contour integration
-- [x] Apply Cauchy integral formula
-- [x] Important results based on CIF
-- [ ] Ability to represent complex function as Power and Laurents series
-- [ ] Understand different type of singularity
-- [ ] Rouches theorem and application
+- [x] Simplex Algorithm
+- [x] Big-M
+- [x] Two Phase
+- [ ] Dual Simplex Algorithm
+- [ ] Transportation Problem
+- [ ] Assignment Problem
+- [ ] Game Theory
+- [ ] Dynamic Programming 
+- [ ] Nonlinear Programming
+- [ ] KKT Conditions
 
 ## References
 
-- Foundations Of Complex Analysis by S. Ponnusamy
-- Complex Variable: Schaum's Outlines Series
-- [Complex Analysis by Beck](http://math.sfsu.edu/beck/papers/complex.pdf)
+- Operation Research by Hamady A. Taha
 
 ## Routine
 

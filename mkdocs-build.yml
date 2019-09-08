@@ -1,19 +1,7 @@
-site_name: Complex Analysis
-site_url: https://sandeepsuman.com/complex-analysis/
+site_name: Operation Research
+site_url: https://sandeepsuman.com/operation-research/
 nav:
   - Home: index.md
-  - Fundamentals:
-    - 'Definition and Algebra': 'Introduction.ipynb'
-    - 'Argand Plane': 'Plotting.ipynb'
-    - 'Complex Functions': 'Function.ipynb'
-  - Integration:
-    - 'Contour Integration': 'Integration.ipynb'
-    - 'Cauchy Integral Formula': 'cauchy-integral-formula.md'
-    - 'Results Based on CIF': 'results-on-cauchy-integral-formula.md'
-    - 'Maximum Modulus Theorem': 'maximum-modulus-theorem.md'
-  - Series:
-    - 'Power Series': 'power-series.md'
-    - 'Taylor Theorem': 'taylor.md'
   - Assignments: assignments.md
   - Exam: exam.md
 
@@ -27,8 +15,8 @@ theme:
 
 
   palette:
-    primary: 'teal'
-    accent: 'teal'
+    primary: 'brown'
+    accent: 'yellow'
 
   font:
     text: 'Ubuntu'
