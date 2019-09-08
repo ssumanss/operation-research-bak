@@ -1,63 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-     <loc>https://sandeepsuman.com/complex-analysis/</loc>
-     <lastmod>2019-06-11</lastmod>
+     <loc>https://sandeepsuman.com/operation-research/</loc>
+     <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sandeepsuman.com/complex-analysis/Introduction/</loc>
-     <lastmod>2019-06-11</lastmod>
+     <loc>https://sandeepsuman.com/operation-research/assignments/</loc>
+     <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
     <url>
-     <loc>https://sandeepsuman.com/complex-analysis/Plotting/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/Function/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/Integration/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/cauchy-integral-formula/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/results-on-cauchy-integral-formula/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/maximum-modulus-theorem/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/power-series/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/taylor/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/assignments/</loc>
-     <lastmod>2019-06-11</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://sandeepsuman.com/complex-analysis/exam/</loc>
-     <lastmod>2019-06-11</lastmod>
+     <loc>https://sandeepsuman.com/operation-research/exam/</loc>
+     <lastmod>2019-09-08</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>
