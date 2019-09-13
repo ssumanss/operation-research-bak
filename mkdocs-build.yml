@@ -26,7 +26,7 @@ theme:
   static_templates:
     - 404.html
     
-  favicon: '/complex-analysis/static/images/favicon.ico'
+  favicon: '/operation-research/static/images/favicon.ico'
 
 markdown_extensions:
   - admonition
@@ -59,10 +59,10 @@ markdown_extensions:
 
 extra_javascript:
   - 'https://cdn.bootcss.com/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML'
-  - '/complex-analysis/static/js/app.js'
+  - '/operation-research/static/js/app.js'
 
 extra_css:
-  - '/complex-analysis/static/stylesheets/extra.css' # depends on theme
+  - '/operation-research/static/stylesheets/extra.css' # depends on theme
 
 
 google_analytics: ['UA-140256543-1', 'sandeepsuman.com']
