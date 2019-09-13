@@ -2,6 +2,7 @@ site_name: Operation Research
 site_url: https://sandeepsuman.com/operation-research/
 nav:
   - Home: index.md
+  - Scipy: "Scipy.ipynb"
   - Assignments: assignments.md
   - Exam: exam.md
 
