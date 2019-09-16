@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="/operation-research/static/images/favicon.ico">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.4.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.1.1">
     
     
       
@@ -42,9 +42,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.0284f74d.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.3020aac5.css">
       
-        <link rel="stylesheet" href="../assets/stylesheets/application-palette.01803549.css">
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.224b79ff.css">
       
       
         
@@ -53,12 +53,12 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.74668098.js"></script>
+      <script src="../assets/javascripts/modernizr.01ccdecf.js"></script>
     
     
       
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono&display=fallback">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,400i,700|Ubuntu+Mono">
         <style>body,input{font-family:"Ubuntu","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Ubuntu Mono","Courier New",Courier,monospace}</style>
       
     
@@ -139,9 +139,7 @@
               Operation Research
             </span>
             <span class="md-header-nav__topic">
-              
-                Scipy
-              
+              Scipy
             </span>
           
         </div>
@@ -278,6 +276,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-4" title="Example 4" class="md-nav__link">
+    Example 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-6b" title="Example 6.b" class="md-nav__link">
+    Example 6.b
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3b" title="Example 3.b" class="md-nav__link">
+    Example 3.b
+  </a>
+  
+</li>
+      
       
       
       
@@ -366,6 +385,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#example-4" title="Example 4" class="md-nav__link">
+    Example 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-6b" title="Example 6.b" class="md-nav__link">
+    Example 6.b
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-3b" title="Example 3.b" class="md-nav__link">
+    Example 3.b
+  </a>
+  
+</li>
+      
       
       
       
@@ -412,7 +452,7 @@
     & \text{subject to: } && 
         \begin{aligned}[t]
             A_{ub}x &\leq b_{ub} \\
-            A_{eq}x &\leq b_{eq} \\
+            A_{eq}x &= b_{eq} \\
             l\leq x &\leq u
         \end{aligned}
 \end{alignat*}
@@ -425,14 +465,13 @@
 <span class="n">x0_bounds</span> <span class="o">=</span> <span class="p">(</span><span class="bp">None</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 <span class="n">x1_bounds</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="bp">None</span><span class="p">)</span>
 
-<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[</span><span class="n">x0_bounds</span><span class="p">,</span> <span class="n">x1_bounds</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;revised simplex&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">bounds</span><span class="o">=</span><span class="p">[</span><span class="n">x0_bounds</span><span class="p">,</span> <span class="n">x1_bounds</span><span class="p">],</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
 </pre></div>
 
 <div class="codehilite"><pre><span></span><span class="n">res</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>     con: array([], dtype=float64)
-     fun: -22.0
+<div class="codehilite"><pre><span></span>     fun: -22.0
  message: &#39;Optimization terminated successfully.&#39;
      nit: 1
    slack: array([39.,  0.])
@@ -464,11 +503,10 @@
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
      <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">12</span><span class="p">]</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;revised simplex&#39;</span><span class="p">);</span> <span class="n">res</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">);</span> <span class="n">res</span>
 </pre></div>
 
-<div class="codehilite"><pre><span></span>     con: array([], dtype=float64)
-     fun: -18.0
+<div class="codehilite"><pre><span></span>     fun: -18.0
  message: &#39;Optimization terminated successfully.&#39;
      nit: 2
    slack: array([5., 0., 0.])
@@ -495,8 +533,7 @@
             x+2y-2z &\leq 20 \\
             y+2z    &\leq 5  \\
             x,y,z   &\geq 0
-        \end{aligned} \\
-    & \text{Answer:} && \text{Optimal is } 15 \text{ at } (5,0,5/2).
+        \end{aligned}
 \end{alignat*}
 </script>
 </p>
@@ -505,7 +542,7 @@
      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;revised simplex&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
 <span class="n">fancy_output</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
 </pre></div>
 
@@ -532,7 +569,7 @@
      <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">]</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;revised simplex&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
 <span class="n">fancy_output</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">maximize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
@@ -559,7 +596,7 @@
      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;revised simplex&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
 <span class="n">fancy_output</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">maximize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
@@ -584,14 +621,98 @@
 <span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
      <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
 <span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">5</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;revised simplex&#39;</span><span class="p">)</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
 <span class="n">fancy_output</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">maximize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 <p>The value of optimal is <script type="math/tex">10</script> at <script type="math/tex">(0,5/2)</script>
 </p>
-<div class="codehilite"><pre><span></span>
+<h4 id="example-4">Example 4<a class="headerlink" href="#example-4" title="Permanent link">&para;</a></h4>
+<p>Consider the following linear programming problem
+<script type="math/tex; mode=display">
+\begin{alignat*}{2}
+    & \text{maximize: } &&  3x+2y \\
+    & \text{subject to: } && 
+        \begin{aligned}[t]
+            4x - y &\leq 4 \\
+            4x +3y &\leq 6 \\
+            4x + y &\leq 4 \\
+            x, y   &\geq 0
+        \end{aligned}
+\end{alignat*}
+</script>
+</p>
+<div class="codehilite"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+     <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
+<span class="n">fancy_output</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">maximize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
+
+<p>The value of optimal is <script type="math/tex">17/4</script> at <script type="math/tex">(3/4,1)</script>
+</p>
+<h4 id="example-6b">Example 6.b<a class="headerlink" href="#example-6b" title="Permanent link">&para;</a></h4>
+<p>Show that the following problem has unbounded objective
+<script type="math/tex; mode=display">
+\begin{alignat*}{2}
+    & \text{maximize: } && 20x_1 + 5x_2 + x_3 \\
+    & \text{subject to: } && 
+        \begin{aligned}[t]
+            3x_1 + 5x_2 - 5x_3  &\leq 50 \\
+            x_1 + 3x_2 - 4x_3   &\leq 20 \\
+            x_1                 &\leq 10 \\
+             x_1, x_2, x_3     &\geq 0
+        \end{aligned}
+    \end{alignat*}  
+</script>
+</p>
+<div class="codehilite"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">],</span>
+    <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">]]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">50</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">10</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
+<span class="n">res</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span>     fun: -232.0
+ message: &#39;Optimization failed. The problem appears to be unbounded.&#39;
+     nit: 3
+   slack: array([0., 0., 0.])
+  status: 3
+ success: False
+       x: array([10.,  6.,  2.])
+</pre></div>
+
+
+<h4 id="example-3b">Example 3.b<a class="headerlink" href="#example-3b" title="Permanent link">&para;</a></h4>
+<p>Consider the following problem, in the phase I, the artificial variable didn't leave but assumes the value <script type="math/tex">0</script>, hence we can remove it and continue with phase II
+<script type="math/tex; mode=display">
+\begin{alignat*}{2}
+    & \text{maximize: } && 2x_1 + 2x_2 + 4 x_3 \\
+    & \text{subject to: } && 
+        \begin{aligned}[t]
+             2x_1 + x_2 + x_3 &\leq 2 \\
+           3x_1 + 4x_2 + 2x_3  &\geq 8 \\
+             x_1, x_2, x_3     &\geq 0
+        \end{aligned}
+    \end{alignat*}   
+</script>
+</p>
+<div class="codehilite"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">]</span>
+<span class="n">A</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span>
+    <span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">,</span> <span class="o">-</span><span class="mi">4</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+<span class="p">]</span>
+<span class="n">b</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="o">-</span><span class="mi">8</span><span class="p">]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">linprog</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">A_ub</span><span class="o">=</span><span class="n">A</span><span class="p">,</span> <span class="n">b_ub</span><span class="o">=</span><span class="n">b</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;simplex&#39;</span><span class="p">)</span>
+<span class="n">fancy_output</span><span class="p">(</span><span class="n">res</span><span class="p">,</span> <span class="n">maximize</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+<p>The value of optimal is <script type="math/tex">4</script> at <script type="math/tex">(0,2,0)</script>
+</p>
                 
                   
                 
@@ -610,7 +731,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.245445c6.js"></script>
+      <script src="../assets/javascripts/application.dc02f8ce.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
