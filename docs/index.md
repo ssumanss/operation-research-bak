@@ -19,14 +19,14 @@ The course ==Operation Research== focussed on the study of different kinds of op
 - [x] Simplex Algorithm
 - [x] Big-M
 - [x] Two Phase
-- [ ] Dual Simplex Algorithm
+- [x] Dual Simplex Algorithm
 - [ ] Transportation Problem
 - [ ] Assignment Problem
-- [ ] Game Theory
-- [ ] Dynamic Programming
-- [ ] Two Persion Zero Sum Game
-- [ ] Graphical Solution
-- [ ] Game as LPP
+- [x] Game Theory
+- [x] Dynamic Programming
+- [x] Two Persion Zero Sum Game
+- [x] Graphical Solution
+- [x] Game as LPP
 - [ ] Nonlinear Programming
 - [ ] KKT Conditions
 
