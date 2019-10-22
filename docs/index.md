@@ -23,7 +23,10 @@ The course ==Operation Research== focussed on the study of different kinds of op
 - [ ] Transportation Problem
 - [ ] Assignment Problem
 - [ ] Game Theory
-- [ ] Dynamic Programming 
+- [ ] Dynamic Programming
+- [ ] Two Persion Zero Sum Game
+- [ ] Graphical Solution
+- [ ] Game as LPP
 - [ ] Nonlinear Programming
 - [ ] KKT Conditions
 
