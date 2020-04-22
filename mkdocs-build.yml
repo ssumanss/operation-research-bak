@@ -1,14 +1,11 @@
 site_name: Operation Research
 site_url: https://sandeepsuman.com/operation-research/
-nav:
-  - Home: index.md
-  - Scipy: "Scipy.ipynb"
-  - Assignments: assignments.md
-  - Exam: exam.md
 
 plugins:
   - search
   - mknotebooks # pip install mknotebooks
+  - minify:
+      minify_html: true
 
 theme:
   name: material
@@ -72,3 +69,14 @@ copyright: 'Copyright &copy; 2016 - 2019 <a href="https://sandeepsuman.com">Sand
 
 extra:
   manifest: 'manifest.json'
+
+
+nav:
+  - Home: index.md
+  - Scipy: "Scipy.ipynb"
+  - Game Theory: 
+    - Introduction: game-theory/introduction.md
+    - Definitions: game-theory/basic-definitions.md
+    - Dominant Strategy: game-theory/dominant-strategy.md
+  - Assignments: assignments.md
+  - Exam: exam.md

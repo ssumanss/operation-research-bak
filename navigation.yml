@@ -1,0 +1,9 @@
+nav:
+  - Home: index.md
+  - Scipy: "Scipy.ipynb"
+  - Game Theory: 
+    - Introduction: game-theory/introduction.md
+    - Definitions: game-theory/basic-definitions.md
+    - Dominant Strategy: game-theory/dominant-strategy.md
+  - Assignments: assignments.md
+  - Exam: exam.md
