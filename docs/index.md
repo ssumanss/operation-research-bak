@@ -6,9 +6,9 @@ This page is dedicated to the course of operaton research taught at the universi
 
 - Simplex Algorithm, Big-M, Two Phase Method
 - Dual Simplex and other algorithm
-- Transportaion and Assignment Problems
+- Transportation and Assignment Problems
 - Game Theory
-- Determinsic and Probabilistic Dynamic Programming
+- Deterministic and Probabilistic Dynamic Programming
 - Nonlinear Programming
 - KKT Conditions
 
