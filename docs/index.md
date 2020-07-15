@@ -1,4 +1,4 @@
-# Welcome to complex analysis course
+# Welcome to operation research course
 
 This page is dedicated to the course of operaton research taught at the university department of mathematics, Tilka Manjhi Bhagalpur University, Bhagalpur.
 
