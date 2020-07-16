@@ -9,5 +9,6 @@ nav:
   - Nonlinear Programming:
     - Unconstrained Optimization: nonlinear-programming/unconstrained-optimization.ipynb
     - Equality Constraints: nonlinear-programming/equality-constraints.ipynb
+    - KKT Conditions: nonlinear-programming/kkt1.ipynb
   - Assignments: assignments.md
   - Exam: exam.md

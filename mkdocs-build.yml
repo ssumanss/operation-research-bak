@@ -80,6 +80,7 @@ nav:
     - Dominant Strategy: game-theory/dominant-strategy.md
     - Maximin Strategy: game-theory/maximin-strategy.md
   - Nonlinear Programming:
+    - Unconstrained Optimization: nonlinear-programming/unconstrained-optimization.ipynb
     - Equality Constraints: nonlinear-programming/equality-constraints.ipynb
   - Assignments: assignments.md
   - Exam: exam.md
