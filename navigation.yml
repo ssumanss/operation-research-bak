@@ -2,6 +2,7 @@ nav:
   - Home: index.md
   - Linear Programming:
     - Simplex Algorithm: linear-programming/simplex.ipynb
+    - Big M Method: linear-programming/bigm.ipynb
     - Scipy: linear-programming/scipy.ipynb
   - Game Theory: 
     - Introduction: game-theory/introduction.md
