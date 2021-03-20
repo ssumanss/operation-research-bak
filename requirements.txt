@@ -15,7 +15,7 @@ future==0.18.2
 htmlmin==0.1.12
 idna==2.9
 ipython-genutils==0.2.0
-Jinja2==2.11.2
+Jinja2==2.11.3
 jsmin==2.2.2
 jsonschema==3.2.0
 jupyter-client==6.1.3
