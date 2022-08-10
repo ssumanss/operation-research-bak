@@ -30,7 +30,7 @@ mkdocs-material==5.1.1
 mkdocs-material-extensions==1.0b2
 mkdocs-minify-plugin==0.3.0
 mknotebooks==0.3.6
-nbconvert==5.6.1
+nbconvert==6.3.0
 nbformat==5.0.6
 nltk==3.4.4
 pandocfilters==1.4.2
